@@ -1,0 +1,11 @@
+---
+title: "nnAudio: An on-the-Fly GPU Audio to Spectrogram Conversion Toolbox Using 1D Convolutional Neural Networks"
+collection: publications
+permalink: /publication/nnAudio
+excerpt: ''
+date: 2020-08-24
+venue: 'IEEE Access'
+---
+In this paper, we present nnAudio, a new neural network-based audio processing framework with graphics processing unit (GPU) support that leverages 1D convolutional neural networks to perform time domain to frequency domain conversion. It allows on-the-fly spectrogram extraction due to its fast speed, without the need to store any spectrograms on the disk. Moreover, this approach also allows back-propagation on the waveforms-to-spectrograms transformation layer, and hence, the transformation process can be made trainable, further optimizing the waveform-to-spectrogram transformation for the specific task that the neural network is trained on. All spectrogram implementations scale as Big-O of linear time with respect to the input length. nnAudio, however, leverages the compute unified device architecture (CUDA) of 1D convolutional neural network from PyTorch, its short-time Fourier transform (STFT), Mel spectrogram, and constant-Q transform (CQT) implementations are an order of magnitude faster than other implementations using only the central processing unit (CPU). We tested our framework on three different machines with NVIDIA GPUs, and our framework significantly reduces the spectrogram extraction time from the order of seconds (using a popular python library librosa) to the order of milliseconds, given that the audio recordings are of the same length. When applying nnAudio to variable input audio lengths, an average of 11.5 hours are required to extract 34 spectrogram types with different parameters from the MusicNet dataset using librosa. An average of 2.8 hours is required for nnAudio, which is still four times faster than librosa. Our proposed framework also outperforms existing GPU processing libraries such as Kapre and torchaudio in terms of processing speed.
+
+[Download](https://ieeexplore.ieee.org/abstract/document/9174990)

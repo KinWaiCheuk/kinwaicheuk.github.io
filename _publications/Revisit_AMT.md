@@ -1,0 +1,11 @@
+---
+title: "The Effect of Spectrogram Reconstruction on Automatic Music Transcription: An Alternative Approach to Improve Transcription Accuracy"
+collection: publications
+permalink: /publication/Revisit_AMT
+excerpt: ''
+date: 2021-05-05 
+venue: 'International Conference on Pattern Recognition (ICPR)'
+---
+Most of the state-of-the-art automatic music transcription (AMT) models break down the main transcription task into sub-tasks such as onset prediction and offset prediction and train them with onset and offset labels. These predictions are then concatenated together and used as the input to train another model with the pitch labels to obtain the final transcription. We attempt to use only the pitch labels (together with spectrogram reconstruction loss) and explore how far this model can go without introducing supervised sub-tasks. In this paper, we do not aim at achieving state-of-the-art transcription accuracy, instead, we explore the effect that spectrogram reconstruction has on our AMT model. Our proposed model consists of two U-nets: the first U-net transcribes the spectrogram into a posteriorgram, and a second U-net transforms the posteriorgram back into a spectrogram. A reconstruction loss is applied between the original spectrogram and the reconstructed spectrogram to constrain the second U-net to focus only on reconstruction. We train our model on three different datasets: MAPS, MAESTRO, and MusicNet. Our experiments show that adding the reconstruction loss can generally improve the note-level transcription accuracy when compared to the same model without the reconstruction part. Moreover, it can also boost the frame-level precision to be higher than the state-of-the-art models. The feature maps learned by our U-net contain gridlike structures (not present in the baseline model) which implies that with the presence of the reconstruction loss, the model is probably trying to count along both the time and frequency axis, resulting in a higher note-level transcription accuracy.
+
+[Download](https://ieeexplore.ieee.org/abstract/document/9412155)
