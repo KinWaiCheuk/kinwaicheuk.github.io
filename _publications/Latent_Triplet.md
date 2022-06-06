@@ -1,7 +1,7 @@
 ---
 title: "Latent Space Representation for Multi-Target Speaker Detection and Identification with a Sparse Dataset Using Triplet Neural Networks"
 collection: publications
-permalink: /publication/nnAudio
+permalink: /publication/Latent_Triplet
 excerpt: ''
 date: 2020-02-20
 venue: 'Automatic Speech Recognition and Understanding Workshop (ASRU)'
